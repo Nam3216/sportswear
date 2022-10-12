@@ -1,0 +1,61 @@
+p{
+    color: white;
+}
+
+.navbar{
+    background-color: black;
+    height: 100px;  
+    width: 100%; 
+    z-index: 101;
+    
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+     
+    
+}
+
+
+.navbar li{
+    margin-right: 10px;
+}
+
+.navbar p{
+    color: white;
+}
+
+/*-------------sticky------------*/
+.navbarSticky{
+    position: fixed;
+    background-color: rgb(199, 196, 196);
+   
+   height: 50px;
+   width: 100%;
+   z-index: 101;
+
+   
+  
+}
+
+.navbarSticky ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+   
+     
+    
+}
+
+.navbarSticky li{
+    margin-right: 10px;
+    
+}
+
+/*------*/
+.link{
+    color: white;
+    font-size: 12px;
+}
