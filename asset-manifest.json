@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sportswear/static/css/main.8a6c661f.css",
-    "main.js": "/sportswear/static/js/main.ac6a7ace.js",
+    "main.js": "/sportswear/static/js/main.d622aa92.js",
     "static/js/787.777f0957.chunk.js": "/sportswear/static/js/787.777f0957.chunk.js",
     "index.html": "/sportswear/index.html",
     "main.8a6c661f.css.map": "/sportswear/static/css/main.8a6c661f.css.map",
-    "main.ac6a7ace.js.map": "/sportswear/static/js/main.ac6a7ace.js.map",
+    "main.d622aa92.js.map": "/sportswear/static/js/main.d622aa92.js.map",
     "787.777f0957.chunk.js.map": "/sportswear/static/js/787.777f0957.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8a6c661f.css",
-    "static/js/main.ac6a7ace.js"
+    "static/js/main.d622aa92.js"
   ]
 }
