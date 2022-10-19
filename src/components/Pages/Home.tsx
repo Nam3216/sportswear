@@ -5,27 +5,32 @@ import ProductsHome from "../productsHome/productsHome"
 import "./styleHome.css"
 
 const Home=()=>{
-
+//<Slider/>
     return(
         <div className="home-container">
             <div>
-                <Slider/>
+            <Slider/>
             </div>
             <div className="support-img">
-                <div>
+                <div className="support-img-free">
                     <img src="free.png"/>
                     <p className="img-text">Free Shipping</p>
                     <p>Free Shipping on all order</p>
                 </div>
-                <div>
+                <div className="support-img-free">
                     <img src="support.png"/>
                     <p className="img-text">Support 24/7</p>
                     <p>Online contact center</p>
                 </div>
-                <div>
+                <div className="support-img-free">
                     <img src="money.png"/>
                     <p className="img-text">Money Return</p>
                     <p>Your money is safe</p>
+                </div>
+                <div className="support-img-free">
+                    <img src="offer.png"/>
+                    <p className="img-text">Special Discount</p>
+                    <p>Incredible Offers!</p>
                 </div>
                 
             </div>

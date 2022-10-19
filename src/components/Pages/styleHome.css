@@ -1,9 +1,16 @@
 .support-img{
-    display: flex;
+    /*display: flex;*/
     justify-content: space-around;
     margin-top: 50px;
+     
    
 }
+
+.support-img-free{
+    margin-top: 20px;
+}
+
+
 
 .img-text{
     color: black;
@@ -28,6 +35,48 @@
 }
 
 .products-card-container h3{
+
     font-size: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .support-img{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+       
+    }
+    
+    .img-text{
+        color: black;
+        font-weight: bold;
+        font-family:'Times New Roman', Times, serif;
+    }
+    
+    
+    .category-card-container{
+        margin-top: 100px;
+    }
+    
+    .category-card-container h3{
+        font-size: 30px;
+       
+    }
+    
+    
+    .products-card-container{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .products-card-container h3{
+        font-size: 30px;
+    }
+    
+
+
+
+
 }
 

@@ -1,0 +1,101 @@
+.itemcount{
+    display: flex;
+    border: 1px solid rgb(209, 208, 208);
+    width:100px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
+}
+.itemcount1{
+    display: flex;
+ /*   width: 100px; */
+   margin: 0 auto;
+}
+#substract{
+    cursor: pointer;
+
+}
+
+#substract:hover{
+    background-color: rgb(243, 241, 241);
+}
+
+#add{
+    cursor: pointer;
+    
+
+}
+
+#add:hover{
+    background-color:  rgb(243, 241, 241);
+}
+
+/*-----para cart----*/
+
+.itemcount-cont{
+    margin: 0 auto;
+
+text-align: center;
+    
+   
+    
+}
+
+/*boton del itemcount*/
+.detail-button{
+    
+    width: fit-content;
+  /*  margin: 0 auto;*/
+    margin-top: 10px;
+}
+
+/* boton itemcount para cart*/
+.detail-button-cart{
+    width: fit-content;
+     margin: 0 auto;
+      margin-top: 10px;
+}
+.itemcount-cart{
+   margin: 0 auto;
+   text-align: center;
+   
+   width: 80px;
+  border: 1px solid rgb(209, 208, 208);
+ /*  margin-left: 65px;*/
+}
+
+
+.itemcount1-cart{
+    display: flex;
+    margin: 0 auto;
+    width: 80px;
+   /* background-color:grey;*/
+    text-align: center;
+ 
+}
+
+#substract-cart{
+    cursor: pointer;
+    width: 33%;
+
+}
+
+#substract-cart:hover{
+    background-color: rgb(243, 241, 241);
+}
+
+#add-cart{
+    cursor: pointer;
+    width: 33%;
+    
+
+}
+
+#add-cart:hover{
+    background-color:  rgb(243, 241, 241);
+}
+
+#count{
+    width: 33%;
+}
+

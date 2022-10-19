@@ -23,7 +23,7 @@ p{
     margin-right: 10px;
 }
 
-.navbar p{
+.navbar a{
     color: white;
 }
 
@@ -31,7 +31,7 @@ p{
 .navbarSticky{
     position: fixed;
     background-color: rgb(199, 196, 196);
-   
+    
    height: 50px;
    width: 100%;
    z-index: 101;
@@ -52,6 +52,7 @@ p{
 .navbarSticky li{
     margin-right: 10px;
     
+    
 }
 
 /*------*/
@@ -59,3 +60,8 @@ p{
     color: white;
     font-size: 12px;
 }
+
+a{
+    color: white;
+}
+ 

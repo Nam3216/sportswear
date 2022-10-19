@@ -1,0 +1,23 @@
+#product-main-title{
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.product-main-cont{
+   /* min-height: 650px;*/
+}
+
+@media screen and (min-width: 1000px) {
+
+    #product-main-title{
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+    
+    .product-main-cont{
+        min-height: 650px;
+    }
+
+}

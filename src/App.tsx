@@ -6,11 +6,18 @@ import Navbar from './components/navbar/navbar';
 import Slider from './components/slider/Slider';
 import Home from './components/Pages/Home';
 import Footer from './components/Pages/Footer';
+import Products from './components/Pages/Products';
+import Detail from "./components/Pages/Detail"
+import Cart from './components/Pages/Cart';
+import Context from './Context/Context';
+import Contact from './components/Pages/Contact';
+import About from './components/Pages/About';
 
 //context entre app y content
 function App() {
   return (
     <div className="App">
+      <Context>
       <div className="content">
       <BrowserRouter>
      
@@ -22,11 +29,11 @@ function App() {
       <main>
         <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/running" element={<div>running</div>}/>
-            <Route path="/football" element={<div>football</div>}/>
-            <Route path="/tennis" element={<div>tennis</div>}/>
-            <Route path="/hockey" element={<div>hockey</div>}/>
-            <Route path="/boxing" element={<div>boxing</div>}/>
+            <Route path="/products/:category" element={<Products/>}/>
+           <Route path="/detail/:id" element={<Detail/>}/>
+           <Route path="/cart" element={<Cart/>}/>
+           <Route path="/contact" element={<Contact/>}/>
+           <Route path="/aboutus" element={<About/>}/>
         </Routes>
       </main>
       <footer>
@@ -37,6 +44,7 @@ function App() {
       
       </BrowserRouter>
       </div>
+      </Context>
     </div>
   );
 }

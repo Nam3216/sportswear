@@ -1,0 +1,168 @@
+.contact-form{
+    margin: 0 auto;
+
+    margin-top: 100px;
+    background-color: rgb(235, 232, 232);
+    padding: 30px;
+    width: 90%;
+}
+
+.contact-form p{
+    color:black
+}
+
+.contact-info p{
+    color: black;
+}
+.contact-form input{
+    display: block;
+   /* margin: 0 auto;*/
+    border: 2px solid rgb(226, 224, 224);
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: rgb(235, 232, 232);
+    
+}
+
+
+.contact-form p{
+    text-align: center;
+    margin-bottom: 5px;
+    background-color: rgb(235, 232, 232);
+}
+
+#contact-form-textarea{
+    width: 250px;
+    height: 25vh;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: rgb(235, 232, 232);
+
+}
+
+
+#contact-title{
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: black;
+    margin-top: 120px;
+}
+
+.contact-split{
+   /* display: flex;*/
+
+}
+
+.contact-info{
+    background-color: rgb(235, 232, 232);
+    margin: 0 auto;
+    margin-top: 100px;
+    /*margin-right: 30px;*/
+    width: 90%;
+    
+    
+
+}
+
+.contact-info-text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+   
+    
+}
+
+#contact-follow{
+    font-size: 24px;
+    font-weight:bold ;
+}
+
+.follow-icon{
+    margin-top: 30px;
+   
+}
+
+@media screen and (min-width: 1000px) {
+
+
+    .contact-form{
+        margin: 0 auto;
+    
+        margin-top: 100px;
+        background-color: rgb(235, 232, 232);
+        padding: 30px;
+        width: 100%;
+    }
+    
+    .contact-form input{
+        display: block;
+       /* margin: 0 auto;*/
+        border: 2px solid rgb(226, 224, 224);
+        width: 30vw;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: rgb(235, 232, 232);
+        
+    }
+    
+    
+    .contact-form p{
+        text-align: left;
+        margin-bottom: 5px;
+        background-color: rgb(235, 232, 232);
+    }
+    
+    #contact-form-textarea{
+        width: 30vw;
+        height: 25vh;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: rgb(235, 232, 232);
+    
+    }
+    
+    
+    #contact-title{
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+      
+    }
+    
+    .contact-split{
+        display: flex;
+    }
+    
+    .contact-info{
+        background-color: rgb(235, 232, 232);
+        margin-top: 100px;
+        margin-right: 30px;
+        width: 20vw;
+        
+        
+    
+    }
+    
+    .contact-info-text{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: 40px;
+       
+        
+    }
+    
+    #contact-follow{
+        font-size: 24px;
+        font-weight:bold ;
+    }
+    
+    .follow-icon{
+        margin-top: 30px;
+       
+    }
+
+}

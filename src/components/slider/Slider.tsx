@@ -5,27 +5,29 @@ import { Carousel } from 'react-responsive-carousel';
 import "./styleSlider.css"
 
 const Slider=()=>{
-//https://theeverydayman.co.uk/wp-content/uploads/2017/05/Edit1.jpg
+//https://theeverydayman.co.uk/wp-content/uploads/2017/05/Edit1.jpg //showthumbs false remueve los thubmnail
     return(
       
-        <Carousel autoPlay infiniteLoop interval={3000} showArrows={true} thumbWidth={50}    >
+        <Carousel autoPlay infiniteLoop interval={3000} showArrows={true} thumbWidth={50} showThumbs={false}   >
                 <div className='slider-cont'  >
-                  
+                <img src=""/>
                     <div  id='slider-cont-div1'style={{backgroundImage:"url(https://theeverydayman.co.uk/wp-content/uploads/2017/05/Edit1.jpg)", backgroundRepeat:"no-repeat",backgroundPosition:'center', backgroundSize:"cover"}}>
                         <div className='slider-text'>
                             <h3>Sale Off 50%</h3>
                             <p className='p-text'>Winter Offer Collection</p>
+                         
                         </div>
                     </div>
                    
                 </div>
                 <div className='slider-cont' >
-               
+                <img src=""/>
                     <div className='slider-cont-div' style={{backgroundImage:"url(https://img.freepik.com/free-photo/jogging-young-woman-running-shore_273609-15005.jpg?w=1380&t=st=1665527517~exp=1665528117~hmac=345da4c9671061a732bec5c013210f6d9fb47e3dbd5ce1c11da0219c1ed20a07)", backgroundRepeat:"no-repeat",backgroundPosition:'center', backgroundSize:"cover"}}>
                         <div className='slider-text'>
                             <h3>Sale Off 20%</h3>
                             <p className='p-text'>Summer Collection</p>
                             <p className='p-text'>New Arrivals</p>
+                            
                         </div>
                     </div>
 

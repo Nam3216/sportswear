@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Link } from "react-router-dom";
 //import AdbIcon from '@mui/icons-material/Adb';
 
 /* menu desplegable*/
@@ -56,12 +57,13 @@ const Navbar=()=>{
     },
   });
 
-  const lightTheme = createTheme({
+  const lightTheme2 = createTheme({
     palette: {
-     mode: 'light',
+     mode: 'dark',
       primary: {
-        main: '#D3D3D3',
+        main: '#5A5A5A',
       },
+     
     },
   });
 
@@ -97,185 +99,184 @@ const Navbar=()=>{
 
     return(
         <header >
-            <ThemeProvider theme={navOk  ? lightTheme : darkTheme}>
+            <ThemeProvider theme={navOk  ? lightTheme2 : darkTheme}>
             <AppBar  className={navOk  ? "navbarSticky" : "navbar"} >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-         
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+            <Container maxWidth="xl">
+              <Toolbar disableGutters>
+              
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={{
+                    mr: 2,
+                    display: { xs: 'none', md: 'flex' },
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                  }}
+                >
+                  LOGO
+                </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-               <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-             
-                <Button key="Home" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                  <Typography textAlign="center" className="link">Home</Typography>
-                </Button>
-                <Button key="Products" /*onClick={handleCloseNavMenu}*/
-                        id="basic-button"
-                        aria-controls={open ? 'basic-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                        style={{display:"block"}}>
-                  <Typography textAlign="center" className="link">Products</Typography>
-                </Button>
-                    <Menu
-                    id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                  <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleOpenNavMenu}
+                    color="inherit"
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorElNav}
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
                     }}
-                >
-                        <MenuItem onClick={handleClose}>Running</MenuItem>
-                        <MenuItem onClick={handleClose}>Football</MenuItem>
-                        <MenuItem onClick={handleClose}>Tennis</MenuItem>
-                        <MenuItem onClick={handleClose}>Boxing</MenuItem>
-                        <MenuItem onClick={handleClose}>Hockey</MenuItem>
-                    </Menu>
-                <Button key="Cart" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                  <Typography textAlign="center" className="link">Cart</Typography>
-                </Button>
-                <Button key="Contact" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                  <Typography textAlign="center" className="link">Contact</Typography>
-                </Button>
-                <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                  <Typography textAlign="center" className="link">About Us</Typography>
-                </Button>
-        
-            </Menu>
-          </Box>
-         
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            
-              <Button
-                key="Home"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Home
-              </Button>
-        
-              <Button
-                key="Products"
-                /*onClick={handleCloseNavMenu}*/
-                sx={{ my: 2, color: 'white', display: 'block' }}
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-              >
-                Products
-                
-              </Button>
-                    <Menu
-                    id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+                    keepMounted
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'left',
                     }}
+                    open={Boolean(anchorElNav)}
+                    onClose={handleCloseNavMenu}
+                    sx={{
+                      display: { xs: 'block', md: 'none' },
+                    }}
+                  >
+                  
+                  <Link to={"/"}>   <Button key="Home" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link" ><p> Home</p></Typography>
+                      </Button></Link>
+                      <Button key="Products" 
+                              id="basic-button"
+                              aria-controls={open ? 'basic-menu' : undefined}
+                              aria-haspopup="true"
+                              aria-expanded={open ? 'true' : undefined}
+                              onClick={handleClick}
+                              style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p>Products</p></Typography>
+                      </Button>
+                          <Menu
+                          id="basic-menu"
+                          anchorEl={anchorEl}
+                          open={open}
+                          onClose={handleClose}
+                          MenuListProps={{
+                          'aria-labelledby': 'basic-button',
+                          }}
+                      >
+                          <Link to={"/products/football"}>    <MenuItem onClick={handleClose} className="menuitem"><p>Football</p></MenuItem></Link>
+                          <Link to={"/products/tennis"}>    <MenuItem onClick={handleClose} className="menuitem"><p>Tennis</p></MenuItem></Link>
+                          <Link to={"/products/boxing"}>    <MenuItem onClick={handleClose} className="menuitem"><p>Boxing</p></MenuItem></Link>
+                          <Link to={"/products/hockey"}>    <MenuItem onClick={handleClose} className="menuitem"><p>Hockey</p></MenuItem></Link>
+                          </Menu>
+                  <Link to={"/cart"}>    <Button key="Cart" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p>Cart</p></Typography>
+                      </Button></Link>
+                      <Link to={"/contact"}>    <Button key="Contact" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p>Contact</p></Typography>
+                      </Button></Link>
+                  <Link to={"/aboutus"}>    <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p>About Us</p></Typography>
+                      </Button></Link>
+              
+                  </Menu>
+                </Box>
+              
+                <Typography
+                  variant="h5"
+                  noWrap
+                  component="a"
+                  href=""
+                  sx={{
+                    mr: 2,
+                    display: { xs: 'flex', md: 'none' },
+                    flexGrow: 1,
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                  }}
                 >
-                    <MenuItem onClick={handleClose}>Running</MenuItem>
-                    <MenuItem onClick={handleClose}>Football</MenuItem>
-                    <MenuItem onClick={handleClose}>Tennis</MenuItem>
-                    <MenuItem onClick={handleClose}>Boxing</MenuItem>
-                    <MenuItem onClick={handleClose}>Hockey</MenuItem>
-                    </Menu>
+                  LOGO
+                </Typography>
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                  
+                  <Link to={"/"}>  <Button
+                      key="Home"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Home
+                    </Button></Link>
+              
+                    <Button
+                      key="Products"
+                      /*onClick={handleCloseNavMenu}*/
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                      id="basic-button"
+                      aria-controls={open ? 'basic-menu' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? 'true' : undefined}
+                      onClick={handleClick}
+                    >
+                      Products
+                      
+                    </Button>
+                          <Menu
+                          id="basic-menu"
+                          anchorEl={anchorEl}
+                          open={open}
+                          onClose={handleClose}
+                          MenuListProps={{
+                          'aria-labelledby': 'basic-button',
+                          }}
+                      >
+                      <Link to={"/products/running"}>    <MenuItem  onClick={handleClose}>Running</MenuItem> </Link>
+                      <Link to={"/products/football"}>    <MenuItem onClick={handleClose}>Football</MenuItem></Link>
+                      <Link to={"/products/tennis"}>   <MenuItem onClick={handleClose}>Tennis</MenuItem></Link>
+                      <Link to={"/products/boxing"}>   <MenuItem onClick={handleClose}>Boxing</MenuItem></Link>
+                      <Link to={"/products/hockey"}>   <MenuItem onClick={handleClose}>Hockey</MenuItem></Link>
+                          </Menu>
+                          
                     
-               
-              <Button
-                key="Cart"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Cart
-              </Button>
-              <Button
-                key="Contact"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Contact
-              </Button>
-              <Button
-                key="AboutUs"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                About Us
-              </Button>
-          
-          </Box>
+                          <Link to={"/cart"}>  <Button
+                      key="Cart"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Cart
+                    </Button></Link>
+                <Link to={"/contact"}> <Button
+                      key="Contact"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Contact
+                    </Button></Link>
+                <Link to={"/aboutus"}>  <Button
+                      key="AboutUs"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      About Us
+                    </Button></Link> 
+                
+                </Box>
 
-          
-        </Toolbar>
-      </Container>
-    </AppBar>
+                
+              </Toolbar>
+        </Container>
+      </AppBar>
     </ThemeProvider>
         </header>
     )
