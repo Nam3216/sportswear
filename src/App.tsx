@@ -12,6 +12,7 @@ import Cart from './components/Pages/Cart';
 import Context from './Context/Context';
 import Contact from './components/Pages/Contact';
 import About from './components/Pages/About';
+import Buy from './components/Pages/Buy';
 
 //context entre app y content
 function App() {
@@ -28,12 +29,14 @@ function App() {
       
       <main>
         <Routes>
+        <Route path={"/sportswear"} element={<Home/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="/products/:category" element={<Products/>}/>
            <Route path="/detail/:id" element={<Detail/>}/>
            <Route path="/cart" element={<Cart/>}/>
            <Route path="/contact" element={<Contact/>}/>
            <Route path="/aboutus" element={<About/>}/>
+           <Route path="/buy" element={<Buy/>}/>
         </Routes>
       </main>
       <footer>

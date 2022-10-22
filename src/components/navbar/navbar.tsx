@@ -152,8 +152,8 @@ const Navbar=()=>{
                     }}
                   >
                   
-                  <Link to={"/"}>   <Button key="Home" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                        <Typography textAlign="center" className="link" ><p> Home</p></Typography>
+                  <Link to={"/sportswear"}>   <Button key="Home" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link" ><p style={{color:"white"}} > Home</p></Typography>
                       </Button></Link>
                       <Button key="Products" 
                               id="basic-button"
@@ -162,7 +162,7 @@ const Navbar=()=>{
                               aria-expanded={open ? 'true' : undefined}
                               onClick={handleClick}
                               style={{display:"block"}}>
-                        <Typography textAlign="center" className="link"><p>Products</p></Typography>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>Products</p></Typography>
                       </Button>
                           <Menu
                           id="basic-menu"
@@ -179,13 +179,13 @@ const Navbar=()=>{
                           <Link to={"/products/hockey"}>    <MenuItem onClick={handleClose} className="menuitem"><p>Hockey</p></MenuItem></Link>
                           </Menu>
                   <Link to={"/cart"}>    <Button key="Cart" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                        <Typography textAlign="center" className="link"><p>Cart</p></Typography>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>Cart</p></Typography>
                       </Button></Link>
                       <Link to={"/contact"}>    <Button key="Contact" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                        <Typography textAlign="center" className="link"><p>Contact</p></Typography>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>Contact</p></Typography>
                       </Button></Link>
                   <Link to={"/aboutus"}>    <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
-                        <Typography textAlign="center" className="link"><p>About Us</p></Typography>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>About Us</p></Typography>
                       </Button></Link>
               
                   </Menu>
@@ -211,7 +211,7 @@ const Navbar=()=>{
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                   
-                  <Link to={"/"}>  <Button
+                  <Link to={"/sportswear/"}>  <Button
                       key="Home"
                       onClick={handleCloseNavMenu}
                       sx={{ my: 2, color: 'white', display: 'block' }}

@@ -85,6 +85,13 @@
     font-weight: bold;
     margin-top: 200px;
     color: black;
+    margin-bottom: 200px;
+}
+
+.price-cont button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 @media screen and (min-width: 1000px) {
     .cart-cont{
@@ -160,6 +167,14 @@
     
     .cart-product-modify{
         width: 20%;
+        margin-bottom: 0;
+    }
+
+    #cart-empty{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 200px;
+        color: black;
         margin-bottom: 0;
     }
 

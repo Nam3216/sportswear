@@ -4,7 +4,7 @@
 
 .about-text{
     background-color: rgb(235, 232, 232);
-    width: 700px;
+    width: 70%x;
    /* text-align: center;*/
     margin-top: 100px;
 }
@@ -19,11 +19,47 @@
 #about-title{
     font-size: 36px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 120px;
   
 }
 
 .p-title{
     font-weight: bold;
     font-size: 24px;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .about{
+        color: black;
+    }
+    
+    .about-text{
+        background-color: rgb(235, 232, 232);
+        width: 700px;
+       /* text-align: center;*/
+        margin-top: 100px;
+    }
+    
+    .about-text p{
+        width: 70%;
+        margin: 0 auto;
+        padding: 30px;
+       
+    }
+    
+    #about-title{
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+      
+    }
+    
+    .p-title{
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+
+
 }

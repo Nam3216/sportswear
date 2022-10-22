@@ -4,11 +4,12 @@ import { ContextElement } from "../../Context/Context"
 import ItemCount from "../ItemCount/ItemCount"
 import Button from '@mui/material/Button';
 import "./styleCart.css"
-import { useFetcher } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Cart=()=>{
     const[priceOk,setPriceOk]=useState(0)
     const {addCart,listCart,deleteProduct,price,totalPrice,emptyCart}=useContext(ContextElement)
+    const Navigate=useNavigate()
 
 
     const handleAdd=(quant:any,id:any)=>{
@@ -60,6 +61,7 @@ const Cart=()=>{
             <div className="price-cont">
                 <p>Total Price: $ {price}</p>
                 <Button variant="outlined" onClick={emptyCart} >Empty Cart</Button>
+                <Button variant="outlined" onClick={()=>Navigate("/buy")} >Buy</Button>
             </div>
             
             

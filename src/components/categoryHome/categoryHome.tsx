@@ -1,6 +1,8 @@
 
 import React,{useState,useEffect} from "react"
-import Mock from "../mock/mockInit"
+
+import { Link } from "react-router-dom"
+import axios from "axios"
 import "./styleCategoryHome.css"
 
 interface MockOk{
@@ -14,39 +16,54 @@ const CategoryHome=()=>{
     const[list,setList]=useState<MockOk[]>([])
     const[checkOnMouse,setCheckOnMouse]=useState(0)
 
-    const getList=()=>{
-        return new Promise((resolve,reject)=>{
-            return resolve(Mock)
-        })
+    const GetList=async() =>{
+        try{
+            const items:any= await axios.get("https://sportsapi-production.up.railway.app/init")
+            console.log(items, "items")
+            setList(items.data)
+
+        }catch(error){
+            console.log(error)
+        }
+        
     }
-
+ 
     useEffect(()=>{
-        getList().then((list:any)=>{
-            setList(list)
-        })
+        GetList()
     },[])
-
+  
     const handleOnMouse=(id:any)=>{
        
             setCheckOnMouse(id)
     
         
     }
+
+    /*<div className="category-card" onMouseOver={()=>handleOnMouse(item.id)} >
+                                
+                                    <img src={checkOnMouse == item.id ? item.img2 : item.img} alt="loading"/>
+                                    
+                                    <p>{item.title} </p>*/
     return(
 
         <div className="category-home">
             {list.map((item)=>{
                 return(
-                    <div className="category-card-cont"> 
-                        <p className="category-card-cont-p" >New</p>
-                        <p className="category-card-cont-p">%OFF</p>
-                    <div className="category-card" onMouseOver={()=>handleOnMouse(item.id)} >
-                       
-                        <img src={checkOnMouse == item.id ? item.img2 : item.img} alt="loading"/>
-                        
-                        <p>{item.title} </p>
-                    </div>
-                    </div>
+                    
+                        <div className="category-card-cont"> 
+                            <p className="category-card-cont-p" >New</p>
+                            <p className="category-card-cont-p">%OFF</p>
+                            <Link to={`/products/${item.title.toLocaleLowerCase()}`}>
+                                <div className="category-card"  >
+                                
+                                    <img src={item.img} alt="loading"/>
+                                    
+                                    <p>{item.title} </p>
+                                </div>
+                            </Link>
+                        </div>
+                    
+                
                 )
             })}
         </div>
