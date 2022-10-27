@@ -16,6 +16,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from "react-router-dom";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {useContext} from "react"
+import {ContextElement} from "../../Context/Context"
+import CartMenu from "./cartMenu"
 //import AdbIcon from '@mui/icons-material/Adb';
 
 /* menu desplegable*/
@@ -29,6 +33,9 @@ const pages = ['Home', 'Products', 'Cart', 'Contact', 'About Us'];
 
 const Navbar=()=>{
     const[navOk,setNavOk]=useState(false)
+    const[MenuCart,setMenuCart]=useState(false)
+    const{listCart}=useContext(ContextElement)
+
 /* para appbar*/
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -95,7 +102,10 @@ const Navbar=()=>{
         }
     }
 
-   
+   /*---menu dashboard cart---*/
+   const handleCart=()=>{
+    setMenuCart(true)
+   }
 
     return(
         <header >
@@ -187,6 +197,12 @@ const Navbar=()=>{
                   <Link to={"/aboutus"}>    <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
                         <Typography textAlign="center" className="link"><p style={{color:"white"}}>About Us</p></Typography>
                       </Button></Link>
+                      <Link to={"/register"}>    <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>Register</p></Typography>
+                      </Button></Link>
+                      <Link to={"/login"}>    <Button key="AboutUs" onClick={handleCloseNavMenu} style={{display:"block"}}>
+                        <Typography textAlign="center" className="link"><p style={{color:"white"}}>Login</p></Typography>
+                      </Button></Link>    
               
                   </Menu>
                 </Box>
@@ -270,11 +286,26 @@ const Navbar=()=>{
                     >
                       About Us
                     </Button></Link> 
+                    <Link to={"/register"}>  <Button
+                      key="AboutUs"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Register
+                    </Button></Link> 
+                    <Link to={"/login"}>  <Button
+                      key="AboutUs"
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: 'white', display: 'block' }}
+                    >
+                      Login
+                    </Button></Link> 
                 
                 </Box>
 
-                
+                {listCart.length > 0 && <div style={{marginRight:100}} ><CartMenu/></div>  }
               </Toolbar>
+             
         </Container>
       </AppBar>
     </ThemeProvider>
@@ -332,3 +363,29 @@ export default Navbar
               ))}
             </Menu>
           </Box>*/
+
+
+          /*<div>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        <ShoppingCartIcon/>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >{listCart.map((item)=>{
+        return <MenuItem onClick={handleClose}>{item.price} </MenuItem>
+      })}
+        
+      </Menu>
+    </div>*/

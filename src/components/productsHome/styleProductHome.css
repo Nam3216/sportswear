@@ -45,6 +45,13 @@
    
 }
 
+.product-card-cont{
+    opacity: 0.8;
+}
+
+.product-card-cont:hover{
+    opacity: 1;
+}
 @media screen and (max-width: 299px) {
     .product-card{
         width: 250px;

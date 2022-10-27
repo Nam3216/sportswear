@@ -5,6 +5,8 @@ import ItemCount from "../ItemCount/ItemCount"
 import Button from '@mui/material/Button';
 import "./styleCart.css"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Modal from "../Modal/Modal";
 
 const Cart=()=>{
     const[priceOk,setPriceOk]=useState(0)
@@ -61,7 +63,7 @@ const Cart=()=>{
             <div className="price-cont">
                 <p>Total Price: $ {price}</p>
                 <Button variant="outlined" onClick={emptyCart} >Empty Cart</Button>
-                <Button variant="outlined" onClick={()=>Navigate("/buy")} >Buy</Button>
+                <Modal/>
             </div>
             
             

@@ -18,7 +18,12 @@
     display: inline-block;
     width: 260px;/*para dejar espacio entre cards*/
     text-align: center;
+    opacity: 0.8;
     
+}
+
+.category-card-cont:hover{
+    opacity: 1;
 }
 
 .category-card-cont-p{

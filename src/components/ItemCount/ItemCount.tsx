@@ -40,7 +40,7 @@ const ItemCount=({handleAdd,msg,id,initial}:DataOk)=>{
 
         {msg== "detail" ? (
             <div className="detail-button">
-                <Button variant="outlined" onClick={()=>handleAdd(count,id)} ><p>Add Cart</p> </Button>
+                <Button variant="outlined" onClick={()=>handleAdd(count,id)} ><p>Add to Cart</p> </Button>
             </div>
         ):(
             <div className="detail-button-cart">

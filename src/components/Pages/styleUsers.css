@@ -1,0 +1,38 @@
+.users input{
+    display: block;
+    margin-bottom: 30px;
+    width: 20vw;
+
+}
+
+.users{
+  
+    margin: 0 auto;
+    margin-top: 70px;
+    background-color: rgb(235, 232, 232);
+    padding: 30px;
+    width: 25vw;
+    border-radius: 30px;
+}
+
+.form-user p{
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: black;
+    margin-top: 120px;
+}
+
+.login-cont{
+    width: 100%;
+}
+.login-cont p{
+    color: black;
+
+
+}
+
+.msg-cont p{
+    margin-top: 20px;
+    font-weight: bold;
+}

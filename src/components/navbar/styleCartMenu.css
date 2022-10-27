@@ -1,0 +1,23 @@
+#cart-menu-img{
+    width: 50px;
+
+}
+
+.cart-menu{
+   /* display: flex;*/
+   margin-bottom: 5px;
+   
+}
+
+.cart-menu-cont-text p{
+    font-size: small;
+}
+
+#cart-icon{
+    color: white;
+}
+
+.cart-menu-cont{
+    display: flex;
+    
+}

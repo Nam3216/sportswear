@@ -41,6 +41,15 @@
 }
 
 
+.detail-text p{
+    color: black;
+}
+
+#button-cart{
+    width: 145px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
 
 @media screen and (max-width: 299px) {

@@ -1,11 +1,11 @@
-import React from "react"
+import React,{useState} from "react"
 import "./styleProductItem.css"
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import {useContext} from "react"
 import {ContextElement} from "../../Context/Context"
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import ItemCount from "../ItemCount/ItemCount"
-//import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';
 
 interface dataType{
     data:{
@@ -27,10 +27,14 @@ interface dataType{
 const Item=({data,msg}:dataType)=>{
     const{id,category,img,description,descriptionDetail,price,quantity,size,secondCategory,offer}=data
     const{addCart}=useContext(ContextElement)
+    const[add,setAdd]=useState(false)
+
+    const Navigate=useNavigate()
 
     const handleAdd=(quant:any,id:any)=>{
         //con el id no hago nada, pero sirve para el handleAdd de cart
         addCart(data,quant)
+        setAdd(true)
     }
 
     return(
@@ -62,6 +66,7 @@ const Item=({data,msg}:dataType)=>{
                             <StarOutlineIcon className="star"/><StarOutlineIcon className="star"/><StarOutlineIcon className="star"/><StarOutlineIcon className="star"/><StarOutlineIcon className="star"/>
                         </div>
                         <ItemCount handleAdd={handleAdd} msg={"detail"} id={id} initial={1} />
+                        {add && <Button variant="outlined" id="button-cart" onClick={()=>Navigate("/cart")} ><p>GO TO CART</p></Button>  }
                        
                     </div>
                 </div>

@@ -6,8 +6,8 @@
     margin-top: 10px;
     align-items: center;
     text-align: left;
-    width: 100%;
-    position: absolute;
+  /*  width: 100%;*/
+   /* position: absolute;*/
 }
 
 .footer-cont p{
@@ -44,7 +44,7 @@ footer p{
         height: 200px;
         align-items: center;
         text-align: left;
-        width: 100%;
+        /*width: 100vh;*/
     }
     
     .footer-title{

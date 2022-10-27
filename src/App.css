@@ -37,8 +37,8 @@ main{
  
 min-height: 100vh;
 }
-footer{
-  
+p{
+  color: black;
 }
 @media screen and (min-width: 1000px) {
 
