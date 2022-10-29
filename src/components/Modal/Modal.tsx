@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useEffect} from "react"
 
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
@@ -13,6 +13,8 @@ import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
 import { Link } from "react-router-dom";
+import {useContext} from "react"
+import { ContextElement } from "../../Context/Context";
 import "./styleModal.css"
 
 
@@ -48,18 +50,42 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
-export default function Modal() {
+interface dataOk{
+  data:string
+}
+export default function Modal({data}:dataOk) {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+  const{checkContinueAsGuest,setCheckContinueAsGuest}=useContext(ContextElement)
+ 
 
   const handleClickOpen = () => {
     setOpen(true);
+    if(checkContinueAsGuest ==false){
+      setCheckContinueAsGuest(true)//pone true, asique ahora se ve button continue as guest
+ 
+      
+    }
+    
   };
 
   const handleClose = (value: string) => {
     setOpen(false);
     setSelectedValue(value);
   };
+
+/*useEffect(()=>{
+
+  if(checkContinueAsGuest ==false){
+    setCheckContinueAsGuest(true)
+    alert(true)
+  }
+  else{
+    setCheckContinueAsGuest(false)
+    alert(false)
+  }
+  
+},[])*/
 //Selected: {selectedValue}
   return (
     <div>

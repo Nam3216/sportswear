@@ -11,10 +11,16 @@
 
 .cart-menu-cont-text p{
     font-size: small;
+    color: white
+    ;
 }
 
 #cart-icon{
     color: white;
+}
+
+#cart-icon:hover{
+    color: pink;
 }
 
 .cart-menu-cont{

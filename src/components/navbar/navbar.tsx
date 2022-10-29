@@ -20,6 +20,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {useContext} from "react"
 import {ContextElement} from "../../Context/Context"
 import CartMenu from "./cartMenu"
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 //import AdbIcon from '@mui/icons-material/Adb';
 
 /* menu desplegable*/
@@ -34,7 +38,8 @@ const pages = ['Home', 'Products', 'Cart', 'Contact', 'About Us'];
 const Navbar=()=>{
     const[navOk,setNavOk]=useState(false)
     const[MenuCart,setMenuCart]=useState(false)
-    const{listCart}=useContext(ContextElement)
+    const{listCart,checkContinueAsGuest,setCheckContinueAsGuest}=useContext(ContextElement)
+    
 
 /* para appbar*/
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -49,6 +54,8 @@ const Navbar=()=>{
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    setCheckContinueAsGuest(false)//esto es para button continue as guest de login y register, solo se debe ver cuando va desde cart, ya que ese boton lo lleva a /buy. si va desde otra seccion no se debe ver, asiq con false en este state de context no e ve el boton
+    
   };
 
   const handleCloseUserMenu = () => {
@@ -129,7 +136,7 @@ const Navbar=()=>{
                     textDecoration: 'none',
                   }}
                 >
-                  LOGO
+                 SPORTSWEAR
                 </Typography>
 
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -223,7 +230,7 @@ const Navbar=()=>{
                     textDecoration: 'none',
                   }}
                 >
-                  LOGO
+                  SPORTSWEAR
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                   
@@ -303,7 +310,12 @@ const Navbar=()=>{
                 
                 </Box>
 
-                {listCart.length > 0 && <div style={{marginRight:100}} ><CartMenu/></div>  }
+                {listCart.length > 0 && <div><CartMenu/></div>  }
+                <div className="icons">
+                  <InstagramIcon id="icon-inst"/>
+                  <TwitterIcon id="icon-twit"/>
+                  <FacebookIcon id="icon-faceb"/>
+                </div>
               </Toolbar>
              
         </Container>

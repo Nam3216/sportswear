@@ -1,6 +1,6 @@
 .product-card{
     width: 254px;/*300*/
-    height: 280px;
+    height: 280px/*280*/;
     display: inline-block;
    /* border: 1px solid black;*/
   
@@ -11,12 +11,13 @@
    
 }
 
-.product-card-cont{
+.product-card-cont-home{
     display: inline-block;
     width: 260px;
+   
 }
 
-.product-card-cont-p{
+.product-card-cont-home-p{
     background-color: blueviolet;
     width: 40px;
  
@@ -41,6 +42,7 @@
 
 .product-home{
     width: 100%;
+    margin-top: 100px;
    
    
 }

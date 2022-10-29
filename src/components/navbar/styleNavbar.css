@@ -4,7 +4,7 @@ p{
 
 .navbar{
     background-color: black;
-    height: 100px;  
+    height: 70px;  
     width: 100%; 
     z-index: 101;
     
@@ -64,4 +64,29 @@ p{
 a{
     color: white;
 }
- 
+
+#icon-inst{
+    margin-right: 20px;
+
+}
+
+#icon-twit{
+    margin-right: 20px;
+}
+
+#icon-faceb{
+    margin-right: 20px;
+}
+
+#icon-inst:hover{
+    color:pink
+}
+
+#icon-twit:hover{
+    color:pink
+}
+
+#icon-faceb:hover{
+    color:pink
+}
+

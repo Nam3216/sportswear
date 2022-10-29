@@ -19,7 +19,7 @@ import Login from './components/Pages/Login';
 function App() {
 
   useEffect(()=>{
-    document.title="SportsWear Online Sports Clothing"
+    document.title="SportsWear Online Sports Clothing!"
   },[])
   return (
     <div className="App">

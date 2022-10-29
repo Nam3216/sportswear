@@ -2,9 +2,17 @@
     /*width: 1000px;*/
     text-align: center;
     margin: 0 auto;
-   margin-top: 100px;
+   margin-top: 30px;
    min-height: 60vh;/*para q se vea footer abajo*/
   
+}
+
+#cart-titleOk{
+    font-size: 36px;
+    font-weight: bold;
+   
+    color: black;
+    margin-top: 120px;
 }
 
 .cart-cont p{
@@ -101,6 +109,13 @@
        margin-top: 100px;
    
        
+    }
+
+    #cart-titleOk{
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 50px;
+      
     }
     
     

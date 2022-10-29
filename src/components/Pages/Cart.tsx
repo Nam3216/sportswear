@@ -34,6 +34,7 @@ const Cart=()=>{
 
     return(
         <>
+        <p id="cart-titleOk">CART</p>
         {listCart.length>0 ? (
         <div className="cart-cont">
            
@@ -63,7 +64,7 @@ const Cart=()=>{
             <div className="price-cont">
                 <p>Total Price: $ {price}</p>
                 <Button variant="outlined" onClick={emptyCart} >Empty Cart</Button>
-                <Modal/>
+                <Modal data={"cart"}/>
             </div>
             
             

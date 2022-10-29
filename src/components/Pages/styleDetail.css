@@ -7,7 +7,7 @@
 
 .detail-main-title{
     /*background-color: rgb(206, 206, 206);*/
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 36px;
     font-weight: bold;
    
@@ -16,4 +16,29 @@
 
 .detail-main-title p{
     color: black;
+}
+
+@media screen and (min-width: 1000px) {
+    .detail-main-cont{
+        min-height: 1vh;
+        
+        width: 100%;
+        
+    }
+    
+    .detail-main-title{
+        /*background-color: rgb(206, 206, 206);*/
+        margin-top: 50px;
+        font-size: 36px;
+        font-weight: bold;
+       
+    
+    }
+    
+    .detail-main-title p{
+        color: black;
+    }
+
+
+
 }

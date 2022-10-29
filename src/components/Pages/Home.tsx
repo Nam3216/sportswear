@@ -1,10 +1,36 @@
-import React from "react"
+import React,{useEffect,useState} from "react"
 import Slider from "../slider/Slider"
 import CategoryHome from "../categoryHome/categoryHome"
 import ProductsHome from "../productsHome/productsHome"
 import "./styleHome.css"
+import { Check } from "@mui/icons-material"
 
 const Home=()=>{
+    const[checkCategory,setCheckCategory]=useState(false)
+    const[checkProducts,setCheckProducts]=useState(false)
+
+    useEffect(()=>{
+        window.addEventListener("scroll",handleScroll)
+
+        return ()=> window.removeEventListener("scroll",handleScroll)
+
+    },[])
+
+    const handleScroll=()=>{
+      
+        if(document.querySelector(".products-contOk")!.getBoundingClientRect().top<window.innerHeight){
+            setCheckProducts(true)
+        }else{
+            setCheckProducts(false)
+        }
+        if(document.querySelector(".category-contOk")!.getBoundingClientRect().top<window.innerHeight){
+            setCheckCategory(true)
+        }else{
+            setCheckCategory(false)
+        }
+    }
+
+
 //<Slider/>
     return(
         <div className="home-container">
@@ -34,13 +60,15 @@ const Home=()=>{
                 </div>
                 
             </div>
-            <div className="category-card-container">
+            <div className={checkCategory ?"category-card-container" :"category-contOk" }>
                 <h3>Categories</h3>
                 <CategoryHome/>        
             </div>
-            <div className="products-card-container">
+            <div className={checkProducts ? "products-card-container" :"products-contOk" } >
                 <h3>New Arrivals</h3>
+                <div className={checkProducts ? "products-card-container2" :"products-contOk2" }>
                 <ProductsHome/>        
+                </div>
             </div>
            
         </div>

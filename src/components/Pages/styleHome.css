@@ -27,8 +27,30 @@
     font-size: 30px;
    
 }
+/*---otro products estilo antes de q se active efect----*/
+.products-contOk{
+    margin-top: 100px;
+    margin-bottom: 100px;
+ 
+}
 
+.products-contOk h3{
 
+    font-size: 30px;
+}
+
+.category-contOk{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: none;/* no se ve el principio de categroy*/
+}
+
+.category-contOk h3{
+    font-size: 30px;
+    
+}
+
+/*------*/
 .products-card-container{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -38,6 +60,41 @@
 
     font-size: 30px;
 }
+
+.category-card-container {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+}
+
+.products-card-container {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+}
+
+.support-img{
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both;
+}
+
+/*---animacion----*/
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 
 @media screen and (min-width: 1000px) {
 

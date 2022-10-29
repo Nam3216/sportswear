@@ -19,7 +19,9 @@ const contextType={
         deleteProduct:(id:any)=>id,
         emptyCart:(id:any)=>id,
         price:0,
-        totalPrice:(id:any)=>id
+        totalPrice:(id:any)=>id,
+        checkContinueAsGuest:false,
+        setCheckContinueAsGuest:(checkContinueAsGuest:any)=>checkContinueAsGuest
 }
 const ContextElement=createContext(contextType)
 
@@ -30,6 +32,7 @@ const Context=({children}:Child)=>{
     const[object,setObject]=useState({})
     const[listCart,setListCart]=useState<any[]>([])
     const[price,setPrice]=useState(0)
+    const[checkContinueAsGuest,setCheckContinueAsGuest]=useState(false)
 
 
     const getObject=(object:any)=>{
@@ -84,7 +87,7 @@ const Context=({children}:Child)=>{
 
 
 
-    const dataContext={getObject,object,addCart,listCart,deleteProduct, emptyCart,price,totalPrice}
+    const dataContext={getObject,object,addCart,listCart,deleteProduct, emptyCart,price,totalPrice,checkContinueAsGuest,setCheckContinueAsGuest}
 
     return(
         <ContextElement.Provider value={dataContext} >

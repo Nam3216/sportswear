@@ -46,8 +46,8 @@ const ProductsHome=()=>{
             {list.map((item)=>{
                if(item.offer=="yes"){
                     return(
-                        <div className="product-card-cont">
-                            <p className="product-card-cont-p" >-20%</p>
+                        <div className="product-card-cont-home">
+                            <p className="product-card-cont-home-p" >-20%</p>
                             <Link to={`/detail/${item.id}`}>
                             <div className="product-card"  >
                                 

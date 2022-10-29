@@ -1,10 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect,useState } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import "./styleSlider.css"
 
 const Slider=()=>{
+    const[checkTitle,setChecktitle]=useState(false)
+
+    useEffect(()=>{
+        window.addEventListener("scroll",handleScroll)
+
+        return ()=> window.removeEventListener("scroll",handleScroll)
+
+    },[])
+
+    const handleScroll=()=>{
+      
+        if(document.querySelector(".slider-text")!.getBoundingClientRect().top<window.innerHeight){
+            setChecktitle(true)
+        }else{
+            setChecktitle(false)
+        }
+       
+    }
+
 //https://theeverydayman.co.uk/wp-content/uploads/2017/05/Edit1.jpg //showthumbs false remueve los thubmnail
  //https://img.freepik.com/free-photo/jogging-young-woman-running-shore_273609-15005.jpg?w=1380&t=st=1665527517~exp=1665528117~hmac=345da4c9671061a732bec5c013210f6d9fb47e3dbd5ce1c11da0219c1ed20a07
     return(
